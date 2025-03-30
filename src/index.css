@@ -1,0 +1,233 @@
+@import '@fontsource/m-plus-rounded-1c';
+@import '@fontsource/noto-sans-jp';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-ghibliBeige text-ghibliDark font-body;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a0aec0' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display font-bold;
+}
+
+/* Ghibli-inspired decorative elements */
+.cloud-left {
+  width: 180px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50px;
+  position: absolute;
+  animation: float-cloud 20s ease-in-out infinite;
+}
+
+.cloud-left:before {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: -40px;
+  left: 30px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.cloud-left:after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -60px;
+  right: 30px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.cloud-right {
+  width: 140px;
+  height: 45px;
+  background: #fff;
+  border-radius: 40px;
+  position: absolute;
+  animation: float-cloud 15s ease-in-out 2s infinite;
+}
+
+.cloud-right:before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: -30px;
+  left: 20px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.cloud-right:after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: -45px;
+  right: 25px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.soot-sprite-1 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  z-index: 10;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.soot-sprite-1:before, .soot-sprite-1:after {
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+.soot-sprite-1:before {
+  top: 5px;
+  left: 3px;
+}
+
+.soot-sprite-1:after {
+  top: 5px;
+  right: 3px;
+}
+
+.soot-sprite-2 {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 60%;
+  right: 10%;
+  z-index: 10;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.soot-sprite-2:before, .soot-sprite-2:after {
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.soot-sprite-2:before {
+  top: 6px;
+  left: 4px;
+}
+
+.soot-sprite-2:after {
+  top: 6px;
+  right: 4px;
+}
+
+.totoro-placeholder {
+  width: 120px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: #B9B28A;
+  border-radius: 60px 60px 40px 40px;
+  position: relative;
+}
+
+.totoro-placeholder:before, .totoro-placeholder:after {
+  content: '';
+  position: absolute;
+  background-color: #B9B28A;
+  border-radius: 50%;
+}
+
+.totoro-placeholder:before {
+  width: 30px;
+  height: 30px;
+  top: -15px;
+  left: 20px;
+}
+
+.totoro-placeholder:after {
+  width: 30px;
+  height: 30px;
+  top: -15px;
+  right: 20px;
+}
+.totoro-eyes {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.totoro-eye {
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+.totoro-eye:after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+}
+.totoro-nose {
+  width: 12px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.totoro-belly {
+  width: 80px;
+  height: 40px;
+  background-color: #cbd5e1;
+  border-radius: 40px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@keyframes float-cloud {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+/* Add Ghibli-inspired colors to Tailwind */
+:root {
+  --color-ghibli-blue: #4e90a4;
+  --color-ghibli-green: #7aa25c;
+  --color-ghibli-red: #d16b59;
+  --color-ghibli-yellow: #f9c22e;
+  --color-ghibli-beige: #f5f3ed;
+  --color-ghibli-dark: #333333;
+}

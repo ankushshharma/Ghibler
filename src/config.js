@@ -1,0 +1,1 @@
+export const PICOGEN_API_TOKEN = '81808090bba89b9f0ced379f0851a60e3b15a64c1576112971afb37ecd892474'; // Replace with your actual Picogen API token
