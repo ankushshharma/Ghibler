@@ -35,7 +35,7 @@ const CheckResults = ({ jobId }) => {
       const apiToken = PICOGEN_API_TOKEN;
 
       try {
-        console.log('Making API request to:', apiUrl);
+        //console.log('Making API request to:', apiUrl);
         const response = await axios.get(apiUrl, {
           headers: {
             'API-Token': apiToken
@@ -43,7 +43,7 @@ const CheckResults = ({ jobId }) => {
         });
 
         // Log the full response for debugging
-        console.log('Full API Response:', response.data);
+        //console.log('Full API Response:', response.data);
         
         // Simplified response handling based on the actual API response structure
         if (response.data && Array.isArray(response.data) && response.data.length >= 2) {
